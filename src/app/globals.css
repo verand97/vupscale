@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #1E1F22;
+  --color-foreground: #F5F5F7;
+  
+  --color-neon-purple: #7F56FF;
+  --color-lime-green: #80FF56;
+  --color-charcoal-dark: #1E1F22;
+  --color-charcoal-light: #2B2D31;
+  --color-charcoal-card: rgba(30, 31, 34, 0.6);
+  --color-charcoal-border: rgba(127, 86, 255, 0.15);
+
+  --font-poppins: var(--font-poppins), sans-serif;
+  --font-inter: var(--font-inter), sans-serif;
+  --font-space: var(--font-space-grotesk), sans-serif;
+  
+  --radius-xl: 20px;
+}
+
+:root {
+  --background: #1E1F22;
+  --foreground: #F5F5F7;
+  --neon-purple: #7F56FF;
+  --lime-green: #80FF56;
+}
+
+body {
+  background-color: #1E1F22;
+  color: #F5F5F7;
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Webkit scrollbars for premium look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1E1F22;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(127, 86, 255, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 255, 86, 0.5);
+}
+
+/* Cyber Grid Background */
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(127, 86, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(127, 86, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center center;
+}
+
+/* Glassmorphism Styles */
+.glass-card {
+  background: rgba(30, 31, 34, 0.65);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(127, 86, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.glass-card-purple {
+  background: rgba(127, 86, 255, 0.04);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(127, 86, 255, 0.25);
+  box-shadow: 0 0 25px rgba(127, 86, 255, 0.1);
+}
+
+.glass-card-green {
+  background: rgba(128, 255, 86, 0.02);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(128, 255, 86, 0.2);
+  box-shadow: 0 0 25px rgba(128, 255, 86, 0.05);
+}
+
+/* Cyber Neon Glows */
+.glow-purple {
+  box-shadow: 0 0 20px rgba(127, 86, 255, 0.4);
+}
+
+.glow-green {
+  box-shadow: 0 0 20px rgba(128, 255, 86, 0.4);
+}
+
+.text-glow-purple {
+  text-shadow: 0 0 8px rgba(127, 86, 255, 0.6);
+}
+
+.text-glow-green {
+  text-shadow: 0 0 8px rgba(128, 255, 86, 0.6);
+}
+
+/* Radial Gradient Glows */
+.radial-glow-1 {
+  background: radial-gradient(circle, rgba(127, 86, 255, 0.12) 0%, rgba(30, 31, 34, 0) 70%);
+}
+
+.radial-glow-2 {
+  background: radial-gradient(circle, rgba(128, 255, 86, 0.06) 0%, rgba(30, 31, 34, 0) 70%);
+}
+
+/* Shimmer animations */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.8s infinite;
+}
+
+/* Floating Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
