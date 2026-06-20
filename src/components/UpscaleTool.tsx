@@ -121,11 +121,6 @@ const generateUpscaledDataUrl = (item: UpscaleItem, factor: number): Promise<{ d
 
       // Draw image upscaled
       ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-      
-      // Draw standard upscale watermark (aesthetic element)
-      ctx.fillStyle = "rgba(128, 255, 86, 0.4)";
-      ctx.font = `bold ${Math.max(12, canvas.width / 50)}px sans-serif`;
-      ctx.fillText("VERAND AI", 30, canvas.height - 30);
 
       resolve({ dataUrl: canvas.toDataURL(exportMime, qualityParam), ext: downloadExt });
     };
